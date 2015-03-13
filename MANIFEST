@@ -1,0 +1,11 @@
+Changes
+Makefile.PL
+Makefile.PM
+MANIFEST
+META.yml
+README.md
+com.codechild.jarinjarloader/JarRsrcLoader.java
+com.codechild.jarinjarloader/RsrcURLStreamHandler.java
+com.codechild.jarinjarloader/JIJConstants.java
+com.codechild.jarinjarloader/RsrcURLConnection.java
+com.codechild.jarinjarloader/RsrcURLStreamHandlerFactory.java
