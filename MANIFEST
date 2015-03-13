@@ -1,11 +1,11 @@
 Changes
 Makefile.PL
-Makefile.PM
+lib/Java/Makefile.pm
 MANIFEST
 META.yml
 README.md
-com.codechild.jarinjarloader/JarRsrcLoader.java
-com.codechild.jarinjarloader/RsrcURLStreamHandler.java
-com.codechild.jarinjarloader/JIJConstants.java
-com.codechild.jarinjarloader/RsrcURLConnection.java
-com.codechild.jarinjarloader/RsrcURLStreamHandlerFactory.java
+lib/Java/com.codechild.jarinjarloader/JarRsrcLoader.java
+lib/Java/com.codechild.jarinjarloader/RsrcURLStreamHandler.java
+lib/Java/com.codechild.jarinjarloader/JIJConstants.java
+lib/Java/com.codechild.jarinjarloader/RsrcURLConnection.java
+lib/Java/com.codechild.jarinjarloader/RsrcURLStreamHandlerFactory.java

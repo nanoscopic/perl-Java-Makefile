@@ -1,4 +1,6 @@
 ---
+name: Java-Makefile
+distribution_type:  module
 abstract: 'Script to generate Makefile for building Java projects into a single standalone jar'
 author:
   - 'David Helkowski <cpan@codechild.com>'
@@ -12,7 +14,6 @@ license: mixed; cc-by-sa 4.0 and epl 1.0
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
-name: Java-Makefile
 requires:
   XML::Bare: 0.53
 version: 1.00
