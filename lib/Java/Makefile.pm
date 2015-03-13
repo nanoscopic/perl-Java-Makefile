@@ -193,14 +193,11 @@ sub setup_jarinjar {
   #print "Path: $path\n";
   $path =~ s|/Makefile\.pm$||;
   #print "Path: $path\n";
-  #if( ! -d 'com' ) { mkdir 'com'; }
-  #if( ! -d 'com/codechild' ) { mkdir 'com/codechild'; }
-  #if( ! -d 'com/codechild/jarinjarloader' ) { mkdir 'com/codechild/jarinjarloader'; }
-  if( ! -d 'com.codechild.jarinjarloader' ) { mkdir 'com.codechild.jarinjarloader'; }
-  #`cp $path/com/codechild/jarinjarloader/* com/codechild/jarinjarloader`;
-  #`cd $path/com/codechild/jarinjarloader; javac *.java 2> /dev/null`;
-  `cp $path/com.codechild.jarinjarloader/* com.codechild.jarinjarloader`;
-  `cd com.codechild.jarinjarloader; javac *.java 2> /dev/null`;
+  if( ! -d 'com' ) { mkdir 'com'; }
+  if( ! -d 'com/codechild' ) { mkdir 'com/codechild'; }
+  if( ! -d 'com/codechild/jarinjarloader' ) { mkdir 'com/codechild/jarinjarloader'; }
+  `cp $path/com.codechild.jarinjarloader/* com/codechild/jarinjarloader`;
+  `cd com/codechild/jarinjarloader; javac *.java 2> /dev/null`;
 }
 
 sub write_manifest {
@@ -254,10 +251,7 @@ JC = javac
 all: classes jar
 
 jar: classes
-\tmkdir -p fake/com/codechild
-\tln -s ../../../com.codechild.jarinjarloader fake/com/codechild/jarinjarloader
-\tjar cfm $output_jar_filename $mfile \$(CLASSFILES) \$(CLASSPATHJAR) -C fake com/codechild/jarinjarloader/*.class
-\trm -rf fake
+\tjar cfm $output_jar_filename $mfile \$(CLASSFILES) \$(CLASSPATHJAR) com/codechild/jarinjarloader/*.class
 
 $src_folder/Main.class: $src_folder/Main.java \$(CLASSES)
 \t\$(JC) \$(JFLAGS) -classpath \$(CLASSPATH) \$*.java \$(CLASSES)
